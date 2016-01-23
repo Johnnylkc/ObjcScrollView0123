@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "LandingVC.h"
+
 @interface AppDelegate ()
 
 @end
@@ -15,8 +17,15 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+
+    LandingVC *onePage = [LandingVC new];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = onePage;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

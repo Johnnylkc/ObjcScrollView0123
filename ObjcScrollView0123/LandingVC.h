@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LandingVC.h
 //  ObjcScrollView0123
 //
 //  Created by 劉坤昶 on 2016/1/23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LandingVC : UIViewController
 
 @end
-
