@@ -63,7 +63,7 @@
     
     self.pageControl = [[UIPageControl alloc] init];
     self.pageControl.frame = CGRectMake(width-110 , height-20, 100, 10);
-    self.pageControl.numberOfPages = self.imageArray.count;
+    self.pageControl.numberOfPages = self.imageArray.count;  ////陣列有幾資料 就有幾個點
     
     [self.view addSubview:self.pageControl];
     
@@ -78,7 +78,8 @@
      pageControl.currentPage 顧名思義就是目前頁面的意思
      這個地方我卡最久 因為到底要怎麼樣pageControl顯示白色的點 就代表你scroll到第幾張照片呢？？
     這個做法就是 設一個整數參數page 這個page代表著scrollView左上角那個點累積的位移量 (scrollView.contentOffset.x) 除以
-    整個scrollView的寬，但神奇的是我如果兩個前後對調，白點就會亂跑 這倒是蠻奇怪的
+    整個scrollView的寬，得到的整數，整除就是第一個點，以此類推
+     但神奇的是我如果兩個前後對調，白點就會亂跑 這倒是蠻奇怪的
      可以跑跑看 scroll照片 看log出來得值
      */
      
